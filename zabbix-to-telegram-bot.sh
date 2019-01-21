@@ -6,6 +6,6 @@ if [ $# -ne 3 ] ; then echo 'FAIL: Params not defined.' && echo 'Usage: zabbix-t
 CHAT_ID="$1"
 SUBJECT="$2"
 MESSAGE="$3"
-curl -x !Proxy adres here! --header 'Content-Type: application/json' --request 'POST' --data "{\"chat_id\":\"!TelegramID User1\",\"text\":\"${SUBJECT}\n${MESSAGE}\"}" "https://api.telegram.org/!telegram-bot token here!/sendMessage" | grep -q '"ok":false,'
-curl -x !Proxy adres here! --header 'Content-Type: application/json' --request 'POST' --data "{\"chat_id\":\"!TelegramID User2\",\"text\":\"${SUBJECT}\n${MESSAGE}\"}" "https://api.telegram.org/!telegram-bot token here!/sendMessage" | grep -q '"ok":false,'
+curl -x http://!Proxy adres here! --header 'Content-Type: application/json' --request 'POST' --data "{\"chat_id\":\"!TelegramID User1\",\"text\":\"${SUBJECT}\n${MESSAGE}\"}" "https://api.telegram.org/!telegram-bot token here!/sendMessage" | grep -q '"ok":false,'
+curl -x http://!Proxy adres here! --header 'Content-Type: application/json' --request 'POST' --data "{\"chat_id\":\"!TelegramID User2\",\"text\":\"${SUBJECT}\n${MESSAGE}\"}" "https://api.telegram.org/!telegram-bot token here!/sendMessage" | grep -q '"ok":false,'
 if [ $? -eq 0 ] ; then exit 1 ; fi
