@@ -151,8 +151,8 @@ public class TestProxy {
             }
             readerScr.close();
             String s0 = "curl -x http://";
-            String s1 = ":3128 --header 'Content-Type: application/json' --request 'POST' --data \"{\\\"chat_id\\\":\\\"465801197\\\",\\\"text\\\":\\\"${SUBJECT}\\n${MESSAGE}\\\"}\" \"https://api.telegram.org/bot523584658:AAE5QmWYsbhrDRZaEtFcFw5bVj7VdZ17s4c/sendMessage\" | grep -q '\"ok\":false,'";
-            String s2 = ":3128 --header 'Content-Type: application/json' --request 'POST' --data \"{\\\"chat_id\\\":\\\"88512903\\\",\\\"text\\\":\\\"${SUBJECT}\\n${MESSAGE}\\\"}\" \"https://api.telegram.org/bot523584658:AAE5QmWYsbhrDRZaEtFcFw5bVj7VdZ17s4c/sendMessage\" | grep -q '\"ok\":false,'";
+            String s1 = ":3128 --header 'Content-Type: application/json' --request 'POST' --data \"{\\\"chat_id\\\":\\\"!!!CHANGE_CHAT_ID!!!\\\",\\\"text\\\":\\\"${SUBJECT}\\n${MESSAGE}\\\"}\" \"https://api.telegram.org/!!!CHANGE_BOT_ID!!!/sendMessage\" | grep -q '\"ok\":false,'";
+            String s2 = ":3128 --header 'Content-Type: application/json' --request 'POST' --data \"{\\\"chat_id\\\":\\\"!!!CHANGE_CHAT_ID!!!\\\",\\\"text\\\":\\\"${SUBJECT}\\n${MESSAGE}\\\"}\" \"https://api.telegram.org/!!!CHANGE_BOT_ID!!!/sendMessage\" | grep -q '\"ok\":false,'";
 
             scriptContent.set(8,s0+s+s1);
             scriptContent.set(9,s0+s+s2);
